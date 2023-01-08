@@ -1,6 +1,6 @@
 const recipes = document.querySelector(".recipes");
 const title = ["BREAKFAST", "LUNCH", "DINNER"];
-const APIkey = "762edaaec89247669656643118584c3a";
+const APIkey = "dc377628a1814736b158066c9cfab78c";
 
 let dailyCalories;
 const cardContainer = document.getElementById("cards-container");
@@ -48,7 +48,6 @@ formBtn.addEventListener("click", (event) => {
 });
 
 const generatemeal = async (bmr) => {
-  document.getElementById("loader").style.display = "block";
   const url = `https://api.spoonacular.com//mealplanner/generate?timeFrame=day&targetCalories=${dailyCalories}&apiKey=${APIkey}&includeNutrition=true`;
   let datas;
   await fetch(url)
